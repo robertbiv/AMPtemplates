@@ -44,4 +44,5 @@ App.HasReadableConsole=True
 App.SteamUpdateAnonymousLogin=False
 App.SteamForceWindowsVersion=True
 App.SteamForceLoginPrompt=True
+App.UpdateSources=@IncludeJSON[farming-simulator-25updates.json]
 App.Ports=@IncludeJson[farming-simulator-25ports.json]
