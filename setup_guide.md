@@ -34,8 +34,8 @@ Now, we will tell AMP to download the template straight from your GitHub reposit
 2. In the left sidebar, navigate to **Configuration** -> **Instance Deployment**.
 3. Scroll down to the **Configuration Repositories** section.
 4. Click **Add** to add a new repository.
-5. Enter your repository details in the format `Username/RepositoryName:Branch`. 
-   *(For example, if your GitHub username is `Bob` and the repo is `FS25-AMP`, you would type `Bob/FS25-AMP:main`)*
+5. Enter your repository details in the format `Username/RepositoryName:Branch`.
+   *(In your case, you will type `robertbiv/AMPtemplates:master`)*
 6. Click the **Fetch** button.
 7. **Refresh your browser page**. AMP has now securely downloaded and registered your FS25 template!
 
