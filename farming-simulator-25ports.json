@@ -1,0 +1,16 @@
+[
+    {
+        "Protocol": "UDP",
+        "Port": 10823,
+        "Ref": "GamePort",
+        "Name": "Game Port",
+        "Description": "The main game port used by players to connect to the server."
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 8080,
+        "Ref": "WebPort",
+        "Name": "Web Admin Port",
+        "Description": "The port for the Farming Simulator Web Administration Panel."
+    }
+]

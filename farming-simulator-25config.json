@@ -1,0 +1,58 @@
+[
+    {
+        "DisplayName": "Game Connection Port",
+        "Category": "Farming Simulator 25:agriculture",
+        "Subcategory": "Network Settings:dns:1",
+        "Description": "The port players use to connect. IMPORTANT: You must manually set this port in the GIANTS Web Panel to match this value! (Default: 10823)",
+        "Keywords": "port,gameport",
+        "FieldName": "$GamePort",
+        "InputType": "number",
+        "MinValue": "1024",
+        "MaxValue": "65535",
+        "ParamFieldName": "GamePort",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "10823",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Web Admin Port",
+        "Category": "Farming Simulator 25:agriculture",
+        "Subcategory": "Network Settings:dns:1",
+        "Description": "The port used to access the GIANTS dedicated server Web Administration Panel.",
+        "Keywords": "web,port,admin",
+        "FieldName": "$WebPort",
+        "InputType": "number",
+        "MinValue": "1024",
+        "MaxValue": "65535",
+        "ParamFieldName": "/server/ports/webPort",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "8080",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Web Admin Username",
+        "Category": "Farming Simulator 25:agriculture",
+        "Subcategory": "Web Admin Credentials:vpn_key:2",
+        "Description": "The admin username for logging into the GIANTS Web Administration Panel.",
+        "Keywords": "username,user,admin",
+        "FieldName": "AdminUsername",
+        "InputType": "text",
+        "ParamFieldName": "/server/webAdmin/username",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "admin",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Web Admin Password",
+        "Category": "Farming Simulator 25:agriculture",
+        "Subcategory": "Web Admin Credentials:vpn_key:2",
+        "Description": "The password for logging into the GIANTS Web Administration Panel.",
+        "Keywords": "password,pass,admin",
+        "FieldName": "AdminPassword",
+        "InputType": "password",
+        "ParamFieldName": "/server/webAdmin/password",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "admin12345",
+        "EnumValues": {}
+    }
+]

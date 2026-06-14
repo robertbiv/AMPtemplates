@@ -1,0 +1,7 @@
+[
+    {
+        "ConfigFile": "dedicatedServer.xml",
+        "AutoMap": true,
+        "ConfigType": "xml"
+    }
+]
