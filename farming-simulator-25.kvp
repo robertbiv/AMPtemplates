@@ -27,9 +27,9 @@ App.DisplayName=Farming Simulator 25
 App.RootDir=./farming-simulator-25/
 App.BaseDirectory=./farming-simulator-25/2300320/
 App.ExecutableWin=2300320\dedicatedServer.exe
-App.ExecutableLinux=/usr/bin/xvfb-run
+App.ExecutableLinux=/bin/bash
 App.WorkingDir=2300320
-App.LinuxCommandLineArgs=-a wine "./dedicatedServer.exe"
+App.LinuxCommandLineArgs=-c "if [ -f ./dedicatedServer.exe ]; then /usr/bin/xvfb-run -a wine ./dedicatedServer.exe; else echo '======================================================================'; echo 'ERROR: dedicatedServer.exe not found!'; echo 'Please click the UPDATE button to log in to Steam and download the game.'; echo '======================================================================'; sleep 15; exit 1; fi"
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}}
 App.UseLinuxIOREDIR=False
