@@ -24,7 +24,7 @@
         "InputType": "number",
         "MinValue": "1024",
         "MaxValue": "65535",
-        "ParamFieldName": "/server/ports/webPort",
+        "ParamFieldName": "/server/webserver/@port",
         "IncludeInCommandLine": false,
         "DefaultValue": "8080",
         "EnumValues": {}
@@ -37,7 +37,7 @@
         "Keywords": "username,user,admin",
         "FieldName": "AdminUsername",
         "InputType": "text",
-        "ParamFieldName": "/server/webAdmin/username",
+        "ParamFieldName": "/server/webserver/initial_admin/username",
         "IncludeInCommandLine": false,
         "DefaultValue": "admin",
         "EnumValues": {}
@@ -50,7 +50,7 @@
         "Keywords": "password,pass,admin",
         "FieldName": "AdminPassword",
         "InputType": "password",
-        "ParamFieldName": "/server/webAdmin/password",
+        "ParamFieldName": "/server/webserver/initial_admin/passphrase",
         "IncludeInCommandLine": false,
         "DefaultValue": "admin12345",
         "EnumValues": {}
