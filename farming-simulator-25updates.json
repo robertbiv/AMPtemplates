@@ -16,5 +16,13 @@
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"rm -rf \\\"{{$FullRootDir}}.wine\\\" >/dev/null 2>&1; WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDLLOVERRIDES=\\\"mscoree,mshtml=\\\" WINEDEBUG=-all /usr/bin/wineboot --init\"",
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Create Startup Script",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cat << 'EOF' > start.sh\n#!/bin/bash\nif [ -f ./2300320/dedicatedServer.exe ]; then\n  VPS_IP=\\$(curl -s --max-time 3 https://api.ipify.org || wget -qO- --timeout=3 https://api.ipify.org || echo '<your-vps-ip>')\n  echo '======================================================================'\n  echo 'GIANTS Web Administration Panel is available at:'\n  echo 'http://'\\$VPS_IP':'\\$1\n  echo 'Credentials: '\\$2' / '\\$3\n  echo '======================================================================'\n  cd 2300320\n  /usr/bin/xvfb-run -a wine ./dedicatedServer.exe\nelse\n  echo '======================================================================'\n  echo 'ERROR: dedicatedServer.exe not found!'\n  echo 'Please click the UPDATE button to log in to Steam and download the game.'\n  echo '======================================================================'\n  tail -f /dev/null\nfi\nEOF\nchmod +x start.sh\"",
+        "SkipOnFailure": false
     }
 ]
