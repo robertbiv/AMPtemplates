@@ -30,7 +30,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEDEBUG=-all /usr/bin/xvfb-run -a winetricks -q vcrun2022\"",
+        "UpdateSourceArgs": "-c \"wget -q -O vc_redist.x64.exe https://aka.ms/vs/17/release/vc_redist.x64.exe && WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEDEBUG=-all /usr/bin/xvfb-run -a wine vc_redist.x64.exe /install /quiet /norestart && rm -f vc_redist.x64.exe\"",
         "SkipOnFailure": false
     },
     {
